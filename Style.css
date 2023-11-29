@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #161815;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)),
+        url(Img/bg2.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;        
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 24px;
+    color: #4f1313;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    display: inline-block;
+}
+
+/* Agrega margen para separar los botones */
+.navbar li {
+    margin: 0 10px;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: #0040ff;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+}
+
+.header-txt{
+    width: 100%;
+}
+
+.header-txt h1{
+    font-size: 60px;
+    line-height: 130px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px; 
+}
+
+.header-txt p{
+    font-size: 25px;
+    color: #C4C4C4;
+    margin-bottom: 35px;
+    border-left: 1px solid #ffffff;
+    padding-left: 15px;
+}
+
+.header-img{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.header-img a{
+    margin-bottom: 30px;
+}
+
+.conceptos{
+    padding: 50px 0;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-size: 45px;
+    line-height: 55px;
+    color: #ffffff;
+    margin-bottom: 15px;
+
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-size: 30px;
+    line-height: 50px;
+    color: #ffffff;
+    
+    margin-bottom: 15px;
+}
+
+p{
+    font-size: 15px;
+    color: #C4C4C4;
+}
+
+/* Estilos para desplegar la lista de los botones  */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.dropdown-content a:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+footer{
+    color: #fff; 
+    padding: 20px; 
+    text-align: center; 
+ 
+}
+
+#scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media(max-width:991px){
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .manu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #161815;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header{
+        min-height: 0vh;
+    }
+
+    .header-content{
+        flex-direction: column;
+        padding: 100px 30px 30px 30px;
+    }
+
+    .header-txt{
+        width: 100%;
+        line-height: 90px;
+        margin-bottom: 15px;
+    }
+
+    .header-txt p{
+        border: 0;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .header-img{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .header-img a{
+        margin: 0 10px;
+    }
+
+    .conceptos{
+        padding: 30px;
+    }
+
+    h2{
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    
+
+
+}
+
+
+
+
